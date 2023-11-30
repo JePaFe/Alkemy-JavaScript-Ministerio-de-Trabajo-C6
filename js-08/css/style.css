@@ -1,0 +1,15 @@
+.oculto {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+footer p {
+  color: darkorange;
+}
+
+#primer-parrafo {
+  color: red;
+}
