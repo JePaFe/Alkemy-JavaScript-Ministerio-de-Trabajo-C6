@@ -1,0 +1,8 @@
+h1 {
+  /* background-color: aqua; */
+}
+
+.destacado {
+  background-color: aquamarine;
+  box-shadow: 2px 3px 5px;
+}
