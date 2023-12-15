@@ -2,7 +2,7 @@ import { useContext } from "react";
 import AppContext from "../context/AppContext";
 
 function Footer() {
-  const tasks = useContext(AppContext);
+  const { tasks } = useContext(AppContext);
 
   return (
     <footer>

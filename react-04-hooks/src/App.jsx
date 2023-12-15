@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Footer from "./components/Footer";
 import TaskList from "./components/TaskList";
 import AppContext from "./context/AppContext";
@@ -10,11 +10,23 @@ function App() {
     { id: 3, title: "Tarea 3" },
     { id: 4, title: "Tarea 4" },
   ]);
+  const countNoteRef = useRef(0);
+
+  const addTask = (task) => {
+    setTasks([...tasks, task]);
+    countNoteRef.current++;
+  };
+
+  const data = {
+    tasks,
+    addTask,
+    countNoteRef,
+  };
 
   return (
     <>
       <h1>App</h1>
-      <AppContext.Provider value={tasks}>
+      <AppContext.Provider value={data}>
         <TaskList />
         <Footer />
       </AppContext.Provider>
